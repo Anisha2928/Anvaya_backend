@@ -1,0 +1,55 @@
+{
+  "name": "anvaya_backend",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/argon2": "^0.15.4",
+    "@types/bun": "latest",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/multer": "^1.4.12",
+    "@types/pdf-parse": "^1.1.4",
+    "@types/socket.io": "^3.0.2",
+    "prisma": "^6.4.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {
+    "dev": "bun --hot --env-file=.env run ./src/index.ts",
+    "build": "tsc --project tsconfig.json",
+    "start": "bun dist/index.js",
+    "test": "jest",
+    "prisma:migrate": " bunx prisma migrate dev",
+    "prisma:migrate-deploy": "bunx prisma migrate deploy",
+    "prisma:generate": "bunx prisma generate",
+    "prisma:studio": "bunx prisma studio"
+  },
+  "dependencies": {
+    "@babel/preset-typescript": "^7.26.0",
+    "@google/generative-ai": "^0.22.0",
+    "@langchain/community": "^0.3.33",
+    "@langchain/core": "^0.3.42",
+    "@langchain/google-genai": "^0.1.10",
+    "@langchain/pinecone": "^0.2.0",
+    "@pinecone-database/pinecone": "^5.1.0",
+    "@prisma/client": "^6.4.1",
+    "@types/socket.io-client": "^3.0.0",
+    "anvaya_backend": "file:",
+    "argon2": "^0.41.1",
+    "axios": "^1.8.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "install": "^0.13.0",
+    "jsonwebtoken": "^9.0.2",
+    "langchain": "^0.3.19",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  }
+}
